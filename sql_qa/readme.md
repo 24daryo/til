@@ -52,7 +52,7 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
   例えば社員Aの住所Bがわかればそれにより郵便番号Cもわかる例が当てはまる。
 </details>
 
-<details>
+- <details>
   <summary>ACID特性(ACID property)</summary>
   Atomicity（原子性）、Consistency（一貫性）、Isolation（独立性）、Durability（永続性）を頭字語で表したもの。
   
@@ -60,7 +60,7 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
   
 </details>
 
-<details>
+- - <details>
   <summary>原子性(Atomicity)</summary>
   一連の処理は、全体として実行されるか、実行されないか、どちらかであることが保証されることを指す。
   
