@@ -168,7 +168,7 @@ https://www.techscore.com/tech/sql/index.html/
 </details>
 
 <details>
-  <summary>クロス結合</summary>
+  <summary>クロス結合(class join)</summary>
   2つのテーブルのクロス積またはデカルト積を生成。実際はあまり使わないが順列や組み合わせで役に立つ。
   
   ```SQL
@@ -208,8 +208,28 @@ test=# SELECT * FROM fruits CROSS JOIN kansou;
 </details>
 
 <details>
-  <summary>ナチュラル結合()</summary>
+  <summary>自然結合(natural join)</summary>
+  内部結合や外部結合を行うときに NATURAL キーワードを指定することで、
+  
+  カラム名を指定しなくても二つのテーブルで同じ名前かつ同じ型のカラム名を使って結合できる
 </details>
+
+
+# コマンド関連
+
+<details>
+  <summary>AUTOINCREMENT()</summary>
+ 
+ 型に追加すると自動で+1した値で追加してくれる。
+ 
+- AUTO_INCREMENT はテーブルごとに 1 つのカラムにしか設定できません。
+- AUTO_INCREMENT が設定されたカラムにはインデックスが設定されている必要があります。
+- AUTO_INCREMENT が設定されたカラムには DEFAULT 制約は設定できません。
+- AUTO_INCREMENT が設定されたカラムに正の数値を格納した場合だけ正しく動作する。
+
+</details>
+
+
 
 # テクニック
 
@@ -301,7 +321,6 @@ test=# SELECT *
   ```
   
 </details>
-
 
   
 
