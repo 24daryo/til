@@ -7,7 +7,10 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
 # 用語一覧
 
 <details>
-  <summary>折りたたみを記述</summary>
-  ここに要素を記述
+  <summary>インデックス(Index)</summary>
+  ある列(カラム)の要素について、ある規則性に沿って並び替えられたもの。
+  
+  インデックスがないと、線形探索となりo(n)となるが、整列されていることで計算量を削減し
+  効果的なパフォーマンス向上が得られる
 
 </details>
