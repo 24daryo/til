@@ -217,7 +217,7 @@ test=# SELECT * FROM fruits CROSS JOIN kansou;
   <summary>順列(permutation)</summary>
   nPkを求める。例では、5P2を求める。
   
-  ```
+  ```SQL
   -- 新フルーツテーブル
 test=# SELECT * FROM fruits ;
   name  
@@ -257,6 +257,46 @@ test=# SELECT *
  peach  | orenge
  peach  | melon
 (20 rows)
+  
+  ```
+  
+</details>
+
+
+<details>
+  <summary>組み合わせ(combination)</summary>
+  nCkを求める。例では、5C2を求める。
+  
+  ```SQL
+  -- 新フルーツテーブル
+test=# SELECT * FROM fruits ;
+  name  
+--------
+ apple
+ banana
+ orenge
+ melon
+ peach
+(5 rows)
+
+-- 組み合わせ（コンビネーション）
+test=# SELECT *
+         FROM fruits f1 CROSS JOIN fruits f2
+        WHERE f1.name < f2.name;
+
+  name  |  name  
+--------+--------
+ apple  | banana
+ apple  | orenge
+ apple  | melon
+ apple  | peach
+ banana | orenge
+ banana | melon
+ banana | peach
+ orenge | peach
+ melon  | orenge
+ melon  | peach
+(10 rows)
   
   ```
   
