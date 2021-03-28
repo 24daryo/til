@@ -14,6 +14,9 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
 
 概念理解のために、日本語ではじめは書いておく
 
+
+## Basic
+
 <details>
   <summary>インデックス(Index)</summary>
   ある列(カラム)の要素について、ある規則性に沿って並び替えられたもの。
@@ -57,6 +60,9 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
   このときCはAに推移的関数従属しているという。
   例えば社員Aの住所Bがわかればそれにより郵便番号Cもわかる例が当てはまる。
 </details>
+
+
+## Advanced
 
 <details>
   <summary>ACID特性(ACID property)</summary>
