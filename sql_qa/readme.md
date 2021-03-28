@@ -4,6 +4,12 @@ I have compiled the information on the following sites in my own way.
 
 https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_source=youtube&utm_medium=description&utm_campaign=sql-int-video-09072019
 
+##その他の参照
+
+https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
+
+
+
 # 用語一覧
 
 概念理解のために、日本語ではじめは書いておく
@@ -52,32 +58,43 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
   例えば社員Aの住所Bがわかればそれにより郵便番号Cもわかる例が当てはまる。
 </details>
 
-- <details>
+<details>
   <summary>ACID特性(ACID property)</summary>
   Atomicity（原子性）、Consistency（一貫性）、Isolation（独立性）、Durability（永続性）を頭字語で表したもの。
   
   トランザクション処理において必要とされる4つの要素である。
   
+  例えば、銀行における口座間の送金処理は「送金元口座からの出金」と「送金先口座への入金」という二つの操作が一体不可分の関係となっている。
+  
+  これらを扱う際に必要な特性の条件4項目である。
+  
 </details>
 
-- - <details>
-  <summary>原子性(Atomicity)</summary>
-  一連の処理は、全体として実行されるか、実行されないか、どちらかであることが保証されることを指す。
+<details>
+  <summary>原子性/不可分生(Atomicity)</summary>
+  一連の処理は、「全て実行される」か「一つも実行されない」のどちらかの状態になるという性質。
   
-  つまり、
+  例えば、「送金処理における出金と入金を一体的に扱うこと」が当てはまる。
 </details>
 <details>
-  <summary>一貫性(Consistency)</summary>
+  <summary>一貫性/整合性(Consistency)</summary>
+  トランザクションの前後でデータの整合性が保たれ、矛盾の無い状態が継続される性質。
   
-  つまり、
+  例えば、「送金トランザクションによって口座の残高の値が負になるといったことが起きないようにすること」が当てはまる。
 </details>
 <details>
-  <summary>独立性(Isolation)</summary>
+  <summary>独立性/隔離性(Isolation)</summary>
+  トランザクション実行中の処理過程が外部から隠蔽され、他の処理などに影響を与えない性質。
   
-  つまり、
+  例えば、「送金処理の途上である『出金は実施済みだが入金は未実施』といった状態を外部から読み出されないよう排他制御などを行う」が当てはまる。
+
 </details>
 <details>
-  <summary>永続性(Durability)</summary>
+  <summary>耐久性/永続性(Durability)</summary>
+  
+  トランザクションが完了したら、その結果は記録され、システム障害などが生じても失われることがないという性質。
+  
+  例えば、「データ操作の時系列の記録（ログ）をストレージなどに保存しておき、データ記録中に障害などで中断したら記録を元に更新を反映させるといった処理」が当てはまる。
   
   つまり、
 </details>
