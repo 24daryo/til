@@ -10,11 +10,9 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
 
 https://www.techscore.com/tech/sql/index.html/
 
-
 # 用語一覧
 
 概念理解のために、日本語ではじめは書いておく
-
 
 ## Basic
 
@@ -43,7 +41,6 @@ https://www.techscore.com/tech/sql/index.html/
   ただし、テーブル1つに対して1つしかクラスタ化インデックスを作成できない。
 </details>
 
-
 <details>
   <summary>部分関数従属()</summary>
 </details>
@@ -62,9 +59,7 @@ https://www.techscore.com/tech/sql/index.html/
   例えば社員Aの住所Bがわかればそれにより郵便番号Cもわかる例が当てはまる。
 </details>
 
-
 ## Intermediate
-
 
 <details>
   <summary>ACID特性(ACID property)</summary>
@@ -112,14 +107,13 @@ https://www.techscore.com/tech/sql/index.html/
 </details>
 
 ## コマンド
+
 <details>
   <summary>トリガー(Trigger)</summary>
   表に対して何らかの変更処理が加えられたときに、その変更処理をきっかけとして自動的に実行される特殊なストアドプロシージャのこと
   
   今後ここにコマンド書いておきます
 </details>
-
-
 
 ## Advanced
 
@@ -154,7 +148,6 @@ https://www.techscore.com/tech/sql/index.html/
   
 </details>
 
-
 <details>
   <summary>SQLで利用できる演算子(operaters)は？</summary>
   算術演算子(Arithmetic Operators), 論理演算子(Logical Operators), 比較演算子(Comparison Operators)がある。
@@ -182,46 +175,49 @@ test=# SELECT * FROM fruits ;
 (3 rows)
 
 -- 感想テーブル
-test=# SELECT * FROM kansou ;
-  value   
-----------
- おいしい
- ふつう
- まずい
+test=# SELECT \* FROM kansou ;
+value
+
+---
+
+おいしい
+ふつう
+まずい
 (3 rows)
 
 -- クロス結合
-test=# SELECT * FROM fruits CROSS JOIN kansou;
-  name  |  value   
+test=# SELECT \* FROM fruits CROSS JOIN kansou;
+name | value  
 --------+----------
- apple  | おいしい
- apple  | ふつう
- apple  | まずい
- banana | おいしい
- banana | ふつう
- banana | まずい
- orenge | おいしい
- orenge | ふつう
- orenge | まずい
+apple | おいしい
+apple | ふつう
+apple | まずい
+banana | おいしい
+banana | ふつう
+banana | まずい
+orenge | おいしい
+orenge | ふつう
+orenge | まずい
 (9 rows)
-  ```
+
+````
 </details>
 
 <details>
-  <summary>自然結合(natural join)</summary>
-  内部結合や外部結合を行うときに NATURAL キーワードを指定することで、
-  
-  カラム名を指定しなくても二つのテーブルで同じ名前かつ同じ型のカラム名を使って結合できる
+<summary>自然結合(natural join)</summary>
+内部結合や外部結合を行うときに NATURAL キーワードを指定することで、
+
+カラム名を指定しなくても二つのテーブルで同じ名前かつ同じ型のカラム名を使って結合できる
 </details>
 
 
 # コマンド関連
 
 <details>
-  <summary>AUTOINCREMENT()</summary>
- 
- 型に追加すると自動で+1した値で追加してくれる。
- 
+<summary>AUTOINCREMENT()</summary>
+
+型に追加すると自動で+1した値で追加してくれる。
+
 - AUTO_INCREMENT はテーブルごとに 1 つのカラムにしか設定できません。
 - AUTO_INCREMENT が設定されたカラムにはインデックスが設定されている必要があります。
 - AUTO_INCREMENT が設定されたカラムには DEFAULT 制約は設定できません。
@@ -234,54 +230,53 @@ test=# SELECT * FROM fruits CROSS JOIN kansou;
 # テクニック
 
 <details>
-  <summary>順列(permutation)</summary>
-  nPkを求める。例では、5P2を求める。
-  
-  ```SQL
-  -- 新フルーツテーブル
+<summary>順列(permutation)</summary>
+nPkを求める。例では、5P2を求める。
+
+```SQL
+-- 新フルーツテーブル
 test=# SELECT * FROM fruits ;
-  name  
+name
 --------
- apple
- banana
- orenge
- melon
- peach
+apple
+banana
+orenge
+melon
+peach
 (5 rows)
 
 -- 順列
 test=# SELECT *
-         FROM fruits f1 CROSS JOIN fruits f2
-        WHERE f1.name <> f2.name;
+       FROM fruits f1 CROSS JOIN fruits f2
+      WHERE f1.name <> f2.name;
 
-  name  |  name  
+name  |  name
 --------+--------
- apple  | banana
- apple  | orenge
- apple  | melon
- apple  | peach
- banana | apple
- banana | orenge
- banana | melon
- banana | peach
- orenge | apple
- orenge | banana
- orenge | melon
- orenge | peach
- melon  | apple
- melon  | banana
- melon  | orenge
- melon  | peach
- peach  | apple
- peach  | banana
- peach  | orenge
- peach  | melon
+apple  | banana
+apple  | orenge
+apple  | melon
+apple  | peach
+banana | apple
+banana | orenge
+banana | melon
+banana | peach
+orenge | apple
+orenge | banana
+orenge | melon
+orenge | peach
+melon  | apple
+melon  | banana
+melon  | orenge
+melon  | peach
+peach  | apple
+peach  | banana
+peach  | orenge
+peach  | melon
 (20 rows)
-  
-  ```
-  
-</details>
 
+````
+
+</details>
 
 <details>
   <summary>組み合わせ(combination)</summary>
@@ -300,27 +295,28 @@ test=# SELECT * FROM fruits ;
 (5 rows)
 
 -- 組み合わせ（コンビネーション）
-test=# SELECT *
-         FROM fruits f1 CROSS JOIN fruits f2
-        WHERE f1.name < f2.name;
+test=# SELECT \*
+FROM fruits f1 CROSS JOIN fruits f2
+WHERE f1.name < f2.name;
 
-  name  |  name  
+name | name  
 --------+--------
- apple  | banana
- apple  | orenge
- apple  | melon
- apple  | peach
- banana | orenge
- banana | melon
- banana | peach
- orenge | peach
- melon  | orenge
- melon  | peach
+apple | banana
+apple | orenge
+apple | melon
+apple | peach
+banana | orenge
+banana | melon
+banana | peach
+orenge | peach
+melon | orenge
+melon | peach
 (10 rows)
-  
-  ```
-  
+
+```
+
 </details>
 
-  
 
+
+```
