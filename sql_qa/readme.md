@@ -169,7 +169,7 @@ https://www.techscore.com/tech/sql/index.html/
 
 <details>
   <summary>クロス結合</summary>
-  2つのテーブルのクロス積またはデカルト積を生成。実際はあまり使わない。
+  2つのテーブルのクロス積またはデカルト積を生成。実際はあまり使わないが順列や組み合わせで役に立つ。
   
   ```SQL
   -- フルーツテーブル
