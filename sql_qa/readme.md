@@ -171,7 +171,7 @@ https://www.techscore.com/tech/sql/index.html/
   <summary>クロス結合</summary>
   2つのテーブルのクロス積またはデカルト積を生成。実際はあまり使わない。
   
-  ```
+  ```SQL
   -- フルーツテーブル
 test=# SELECT * FROM fruits ;
   name  
