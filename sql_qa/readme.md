@@ -32,3 +32,44 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
   
   ただし、テーブル1つに対して1つしかクラスタ化インデックスを作成できない。
 </details>
+
+
+<details>
+  <summary>部分関数従属()</summary>
+</details>
+
+<details>
+  <summary>関数従属()</summary>
+  主キーが決まるとその他も一位的に決定できるもの。
+  例えば「千代田区」とわかれば「東京都千代田区」なので東京都も一意的に決定できる。
+  つまり、東京都は千代田区に関数従属していると言える。
+</details>
+
+<details>
+  <summary>部分関数従属()</summary>
+</details>
+
+<details>
+  <summary>部分関数従属()</summary>
+</details>
+
+# 違い一覧
+
+<details>
+  <summary>DROPコマンドとTRUNCATEコマンドの違いは</summary>
+  DROPはロールバックできるDMLであるが、TRUNCATEできないDDLである。ただしTRUNCATEは高速であるメリットあり。
+</details>
+
+<details>
+  <summary>第一正規化</summary>
+  1行の中に複数の繰り返し項目が存在するような表(例えばnameカラムが複数あったり、dateカラムが複数あったり)。
+  追加可能性がある要素は横でなく縦につながる構造にする必要がある(つまり正規化するべき)
+</details>
+
+<details>
+  <summary>第二正規化</summary>
+  
+  簡単にいうと「キーの結びついていない繰り返しが列にある」状態。これも分離して正規化する必要あり。
+</details>
+  
+
