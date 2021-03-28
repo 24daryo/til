@@ -8,6 +8,7 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
 
 https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
 
+https://www.techscore.com/tech/sql/index.html/
 
 
 # 用語一覧
@@ -82,12 +83,16 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
   一連の処理は、「全て実行される」か「一つも実行されない」のどちらかの状態になるという性質。
   
   例えば、「送金処理における出金と入金を一体的に扱うこと」が当てはまる。
+  
+  もしこの途中にエラーが起きても、原子性によりデータベースを変更しないようにする必要あり。
 </details>
 <details>
   <summary>一貫性/整合性(Consistency)</summary>
   トランザクションの前後でデータの整合性が保たれ、矛盾の無い状態が継続される性質。
   
   例えば、「送金トランザクションによって口座の残高の値が負になるといったことが起きないようにすること」が当てはまる。
+  
+  検証ルールを全て完了してから初めてデータベースを更新できる。
 </details>
 <details>
   <summary>独立性/隔離性(Isolation)</summary>
@@ -103,8 +108,13 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
   
   例えば、「データ操作の時系列の記録（ログ）をストレージなどに保存しておき、データ記録中に障害などで中断したら記録を元に更新を反映させるといった処理」が当てはまる。
   
-  つまり、
+  つまり、エラーがいつ起きてもいいようにログをとっておくこと。
 </details>
+
+<details>
+  <summary>トリガー(Trigger)</summary>
+</details>
+
 
 
 ## Advanced
