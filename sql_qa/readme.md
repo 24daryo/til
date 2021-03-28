@@ -211,6 +211,56 @@ test=# SELECT * FROM fruits CROSS JOIN kansou;
   <summary>ナチュラル結合()</summary>
 </details>
 
+# テクニック
+
+<details>
+  <summary>順列(permutation)</summary>
+  nPkを求める。例では、5P2を求める。
+  
+  ```
+  -- 新フルーツテーブル
+test=# SELECT * FROM fruits ;
+  name  
+--------
+ apple
+ banana
+ orenge
+ melon
+ peach
+(5 rows)
+
+-- 順列
+test=# SELECT *
+         FROM fruits f1 CROSS JOIN fruits f2
+        WHERE f1.name <> f2.name;
+
+  name  |  name  
+--------+--------
+ apple  | banana
+ apple  | orenge
+ apple  | melon
+ apple  | peach
+ banana | apple
+ banana | orenge
+ banana | melon
+ banana | peach
+ orenge | apple
+ orenge | banana
+ orenge | melon
+ orenge | peach
+ melon  | apple
+ melon  | banana
+ melon  | orenge
+ melon  | peach
+ peach  | apple
+ peach  | banana
+ peach  | orenge
+ peach  | melon
+(20 rows)
+  
+  ```
+  
+</details>
 
 
   
