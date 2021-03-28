@@ -53,7 +53,24 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
 </details>
 
 <details>
-  <summary>部分関数従属()</summary>
+  <summary>ACID特性(ACID property)</summary>
+  Atomicity（原子性）、Consistency（一貫性）、Isolation（独立性）、Durability（永続性）を頭字語で表したもの。
+  
+  トランザクション処理において必要とされる4つの要素である。
+  
+</details>
+
+<details>
+  <summary>原子性(Atomicity)</summary>
+</details>
+<details>
+  <summary>一貫性(Consistency)</summary>
+</details>
+<details>
+  <summary>独立性(Isolation)</summary>
+</details>
+<details>
+  <summary>永続性(Durability)</summary>
 </details>
 
 # 違い一覧
