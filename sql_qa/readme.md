@@ -111,8 +111,12 @@ https://www.techscore.com/tech/sql/index.html/
   つまり、エラーがいつ起きてもいいようにログをとっておくこと。
 </details>
 
+## コマンド
 <details>
   <summary>トリガー(Trigger)</summary>
+  表に対して何らかの変更処理が加えられたときに、その変更処理をきっかけとして自動的に実行される特殊なストアドプロシージャのこと
+  
+  今後ここにコマンド書いておきます
 </details>
 
 
@@ -149,5 +153,29 @@ https://www.techscore.com/tech/sql/index.html/
   イメージとしては、テーブル内の列の冗長性が完全に排除され、関数従属以外の要素はキーのみで管理されている状態にすること。
   
 </details>
+
+
+<details>
+  <summary>SQLで利用できる演算子(operaters)は？</summary>
+  算術演算子(Arithmetic Operators), 論理演算子(Logical Operators), 比較演算子(Comparison Operators)がある。
+  
+</details>
+
+<details>
+  <summary>NULL値はゼロまたは空白の値と同じ？</summary>
+  全く異なるもの。ゼロは数値であり、空白は文字として認識されるが、NULLは不明な割り当てまたは利用できないものと扱われる。
+  
+</details>
+
+<details>
+  <summary>クロス結合</summary>
+</details>
+
+<details>
+  <summary>ナチュラル結合()</summary>
+</details>
+
+
+
   
 
