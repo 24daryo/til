@@ -169,6 +169,41 @@ https://www.techscore.com/tech/sql/index.html/
 
 <details>
   <summary>クロス結合</summary>
+  2つのテーブルのクロス積またはデカルト積を生成。実際はあまり使わない。
+  ```
+  -- フルーツテーブル
+test=# SELECT * FROM fruits ;
+  name  
+--------
+ apple
+ banana
+ orenge
+(3 rows)
+
+-- 感想テーブル
+test=# SELECT * FROM kansou ;
+  value   
+----------
+ おいしい
+ ふつう
+ まずい
+(3 rows)
+
+-- クロス結合
+test=# SELECT * FROM fruits CROSS JOIN kansou;
+  name  |  value   
+--------+----------
+ apple  | おいしい
+ apple  | ふつう
+ apple  | まずい
+ banana | おいしい
+ banana | ふつう
+ banana | まずい
+ orenge | おいしい
+ orenge | ふつう
+ orenge | まずい
+(9 rows)
+  ```
 </details>
 
 <details>
