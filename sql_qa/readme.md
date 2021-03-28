@@ -62,7 +62,8 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
 </details>
 
 
-## Advanced
+## Intermediate
+
 
 <details>
   <summary>ACID特性(ACID property)</summary>
@@ -104,6 +105,9 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
   
   つまり、
 </details>
+
+
+## Advanced
 
 # 違い一覧
 
