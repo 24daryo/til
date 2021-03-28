@@ -62,15 +62,24 @@ https://www.edureka.co/blog/interview-questions/sql-interview-questions?utm_sour
 
 <details>
   <summary>原子性(Atomicity)</summary>
+  一連の処理は、全体として実行されるか、実行されないか、どちらかであることが保証されることを指す。
+  
+  つまり、
 </details>
 <details>
   <summary>一貫性(Consistency)</summary>
+  
+  つまり、
 </details>
 <details>
   <summary>独立性(Isolation)</summary>
+  
+  つまり、
 </details>
 <details>
   <summary>永続性(Durability)</summary>
+  
+  つまり、
 </details>
 
 # 違い一覧
