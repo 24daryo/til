@@ -10,6 +10,10 @@ https://e-words.jp/w/ACID%E7%89%B9%E6%80%A7.html
 
 https://www.techscore.com/tech/sql/index.html/
 
+### 問題演習
+
+http://sql.main.jp/sql05.html
+
 # 用語一覧
 
 概念理解のために、日本語ではじめは書いておく

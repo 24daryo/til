@@ -281,6 +281,47 @@ class Database():
         cur = self.cur
         cur.execute(query)
 
+    def create_schema(self):
+        #スキーマを作成する
+        query = "create schema schemaA;"
+
+        # オーナーを指定してスキーマを作成する
+        query = "create schema schemaA authorization c;"
+
+        # スキーマAの中にテーブルAを作成する
+        query = """create schemas chemaA 
+                create table tableA (id integer);"""
+
+        # スキーマAとスキーマBに同じテーブルOがあるとする
+        # このとき省略で優先指定できるのをsetで設定できる
+        # ただしsetは現在のセッション中のみで一時的
+        query = "set search_path to schemaA, schemaB;"
+
+        #恒久的に変更する場合は以下のように設定する
+        query = "alter role ownerA set search_path to schemaA, schemaB;"
+
+        # スキーマAをスキーマBに名称変更する
+        query = "alter schema schemaA rename to schemaB;"
+
+        # スキーマAの所有者をownerPへ変更する
+        query = "alter schema schemaA owner to ownerP;"
+
+        # スキーマAを削除する
+        #ただし中にテーブル(オブジェクト)がある場合は削除されない
+        query = "drop schema schemaA;"
+
+        #オブジェクトがあっても削除する場合はCascadeをつける
+        query = "drop schema schemaA cascade;"
+
+        #ちなみにスキーマを設定しない場合、
+        # publicというスキーマへ自動的にテーブルが入っている
+
+
+
+
+
+
+
 
 
     def drop_table(self):
